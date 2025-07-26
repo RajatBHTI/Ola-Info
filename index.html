@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OLA Electric Scooter - The Future of Urban Mobility</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Dark Slate & Vibrant Cyan (for OLA's brand) -->
+    <!-- Application Structure Plan: This single-page promotional website is structured into distinct, scrollable sections: a high-impact Hero, detailed feature showcases (Performance, Intelligence, Sustainability), a Models & Pricing section, and a strong Call to Action. This linear, scrollable design was chosen to guide the user through a clear narrative, emphasizing product information and building a persuasive case for the OLA Electric Scooter, making information absorption intuitive and conversion-focused. The Models & Pricing section provides consistent, detailed technical specifications for the latest generation variants, without pricing, to highlight feature differences. A new section for OLA Electric Bikes showcases their detailed technical specifications. -->
+    <!-- Visualization & Content Choices:
+        - Report Info: Video Objective/Tone -> Goal: Inform/Engage -> Viz/Method: Hero Section with bold text and strong imagery concept -> Interaction: Direct CTA button -> Justification: Immediate impact, sets aspirational tone.
+        - Report Info: Key Benefits (Range, Speed) -> Goal: Inform -> Viz/Method: Dedicated "Unrivaled Performance" section with large metric displays -> Interaction: None, static display -> Justification: Highlights core value propositions with immediate clarity.
+        - Report Info: Smart Features -> Goal: Inform -> Viz/Method: "Intelligent Ride" section with feature cards using Unicode icons and concise descriptions -> Interaction: None -> Justification: Breaks down complex tech into digestible, visually appealing points.
+        - Report Info: Eco-Friendly -> Goal: Inform -> Viz/Method: "Sustainable Future" section with impactful statements and environmental emphasis -> Interaction: None -> Justification: Appeals to eco-conscious audience, reinforces brand values.
+        - Updated: Model Pricing -> Goal: Inform -> Viz/Method: Dedicated "Models & Pricing" section with multiple, consistently styled feature cards for 3rd generation scooter models (S1X all variants, S1 Pro all variants, S1 Pro+ all variants) -> Interaction: None, static display initially -> Justification: Provides comprehensive crucial technical information directly for the current and most relevant scooter models, allowing users to compare options based on specs. The visual styling of these cards has been enhanced for a more premium and engaging look.
+        - Updated: OLA Bikes -> Goal: Inform -> Viz/Method: New section with consistently styled feature cards for OLA Electric Bike models -> Interaction: None, static display -> Justification: Expands product showcase, providing detailed technical specifications for bike lineup in a familiar, engaging format.
+        - Report Info: Call to Action -> Goal: Convert -> Viz/Method: Prominent "Call to Book" section -> Interaction: Clear button -> Justification: Directs user to the desired next step.
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0F172A; /* slate-900 for dark background */
+            color: #F8FAFC; /* slate-100 for white text */
+        }
+        .container {
+            max-width: 1200px;
+        }
+        .button-primary {
+            @apply bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105;
+        }
+        .gradient-bg {
+            background: linear-gradient(to right, #06b6d4, #0891b2); /* cyan-500 to cyan-700 */
+        }
+        .section-heading {
+            @apply text-3xl md:text-4xl font-extrabold text-cyan-400 mb-6; /* Lighter cyan for contrast on dark background */
+        }
+        .feature-icon {
+            @apply text-5xl text-cyan-400 mb-4; /* Lighter cyan */
+        }
+        .stat-card {
+            @apply bg-slate-800 p-6 rounded-lg shadow-lg border border-slate-700 text-center; /* Darker card background, subtle border */
+        }
+        .stat-value {
+            @apply text-4xl font-extrabold text-cyan-400 mt-2; /* Lighter cyan */
+        }
+        .stat-label {
+            @apply text-sm font-medium text-slate-400; /* Lighter text for labels */
+        }
+        .model-card {
+            @apply bg-slate-800 p-6 rounded-lg shadow-xl border border-slate-700 flex flex-col justify-between transition-all duration-300 ease-in-out hover:shadow-2xl hover:scale-102 hover:border-cyan-500; /* Darker card background, subtle border */
+        }
+        .model-name {
+            @apply text-2xl md:text-3xl font-bold text-white mb-4; /* White text for model names */
+        }
+        .model-feature-list {
+            @apply text-left text-slate-200 space-y-2 flex-grow mb-4 p-4 rounded-md bg-cyan-900/30; /* Darker cyan background for list, lighter text */
+        }
+        .model-feature-list li {
+            @apply text-base;
+        }
+        .model-feature-list li strong {
+            @apply text-white; /* White text for strong features */
+        }
+        .text-slate-600 { /* Override for general descriptive text */
+            color: #CBD5E1; /* slate-300 for general text on dark background */
+        }
+    </style>
+</head>
+<body class="antialiased leading-normal">
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-20 px-4 md:py-32 flex items-center justify-center text-center">
+        <div class="container mx-auto">
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">
+                Redefine Your Ride. <br> The Future is Electric.
+            </h1>
+            <p class="text-lg md:text-xl font-light mb-8 max-w-2xl mx-auto">
+                Experience unparalleled performance, smart connectivity, and a sustainable journey with the OLA Electric Scooter.
+            </p>
+            <a href="#book-now" class="button-primary">Book Your OLA Now!</a>
+        </div>
+    </section>
+
+    <!-- Features Section: Performance -->
+    <section class="py-16 px-4 bg-slate-900">
+        <div class="container mx-auto text-center">
+            <h2 class="section-heading">Unrivaled Performance</h2>
+            <p class="text-lg text-slate-300 mb-10 max-w-3xl mx-auto">
+                Engineered for excitement, the OLA Electric Scooter delivers exhilarating speed and impressive range, making every journey a thrill.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="stat-card">
+                    <p class="stat-label">Maximum Range</p>
+                    <p class="stat-value">Up to 320 km</p>
+                    <p class="text-slate-300 mt-2">Go further with class-leading battery efficiency (S1 Pro+ Gen 3).</p>
+                </div>
+                <div class="stat-card">
+                    <p class="stat-label">Acceleration (0-40 km/h)</p>
+                    <p class="stat-value">2.1s</p>
+                    <p class="text-slate-300 mt-2">Instant torque for quick acceleration (S1 Pro+ Gen 3).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section: Intelligence -->
+    <section class="py-16 px-4 bg-gray-950">
+        <div class="container mx-auto text-center">
+            <h2 class="section-heading">Your Intelligent Ride</h2>
+            <p class="text-lg text-slate-300 mb-10 max-w-3xl mx-auto">
+                Packed with cutting-edge technology, the OLA Electric Scooter offers a seamless, connected, and intuitive riding experience.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="bg-slate-800 p-6 rounded-lg shadow-lg border border-slate-700 flex flex-col items-center text-center">
+                    <p class="feature-icon">🌐</p>
+                    <h3 class="text-xl font-semibold text-white mb-2">Connected App</h3>
+                    <p class="text-slate-300">Unlock your scooter, track your ride, and manage charging with a tap on your smartphone.</p>
+                </div>
+                <div class="bg-slate-800 p-6 rounded-lg shadow-lg border border-slate-700 flex flex-col items-center text-center">
+                    <p class="feature-icon">🗣️</p>
+                    <h3 class="text-xl font-semibold text-white mb-2">Voice Control</h3>
+                    <p class="text-slate-300">Navigate, manage calls, and control features with simple voice commands, keeping your hands on the handlebar.</p>
+                </div>
+                <div class="bg-slate-800 p-6 rounded-lg shadow-lg border border-slate-700 flex flex-col items-center text-center">
+                    <p class="feature-icon">💡</p>
+                    <h3 class="text-xl font-semibold text-white mb-2">Intuitive Dashboard</h3>
+                    <p class="text-slate-300">A vibrant digital display provides all the information you need at a glance, from navigation to battery status.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section: Sustainability -->
+    <section class="py-16 px-4 bg-slate-900">
+        <div class="container mx-auto text-center">
+            <h2 class="section-heading">A Sustainable Future</h2>
+            <p class="text-lg text-slate-300 mb-10 max-w-3xl mx-auto">
+                Join the electric revolution. The OLA Electric Scooter is designed for zero emissions, contributing to cleaner air and a greener planet.
+            </p>
+            <div class="max-w-xl mx-auto p-6 bg-cyan-900/50 rounded-lg shadow-lg border border-cyan-800">
+                <p class="text-2xl font-semibold text-cyan-400 mb-4">🌱 Zero Emissions, Infinite Savings. 🌱</p>
+                <p class="text-slate-200">Reduce your carbon footprint and enjoy significant savings on fuel and maintenance. It's smart for you, and smart for the Earth.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Models & Technical Specifications Section - Scooters -->
+    <section class="py-16 px-4 bg-gray-950">
+        <div class="container mx-auto text-center">
+            <h2 class="section-heading">Latest Scooter Models & Technical Specifications</h2>
+            <p class="text-lg text-slate-300 mb-10 max-w-3xl mx-auto">
+                Explore the 3rd generation OLA Electric Scooters, engineered for the ultimate ride.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="model-card">
+                    <div>
+                        <h3 class="model-name">OLA S1 X (2 kWh)</h3>
+                        <ul class="model-feature-list list-disc list-inside px-4">
+                            <li><strong>Battery:</strong> 2 kWh Lithium-ion</li>
+                            <li><strong>Motor:</strong> 5.5 kW Mid-drive IPM (Peak 7kW)</li>
+                            <li><strong>Range (True):</strong> Up to 101 km</li>
+                            <li><strong>Top Speed:</strong> 90 km/h</li>
+                            <li><strong>Display:</strong> 4.3" LCD</li>
+                            <li><strong>Brakes:</strong> Drum (F&R) with CBS</li>
+                            <li><strong>Storage:</strong> 34L underseat</li>
+                            <li><strong>Ignition:</strong> Physical key</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="model-card">
+                    <div>
+                        <h3 class="model-name">OLA S1 X (3 kWh)</h3>
+                        <ul class="model-feature-list list-disc list-inside px-4">
+                            <li><strong>Battery:</strong> 3 kWh Lithium-ion</li>
+                            <li><strong>Motor:</strong> 5.5 kW Mid-drive IPM (Peak 7kW)</li>
+                            <li><strong>Range (True):</strong> Up to 151 km</li>
+                            <li><strong>Top Speed:</strong> 90 km/h</li>
+                            <li><strong>Display:</strong> 4.3" LCD</li>
+                            <li><strong>Brakes:</strong> Drum (F&R) with CBS</li>
+                            <li><strong>Storage:</strong> 34L underseat</li>
+                            <li><strong>Ignition:</strong> Physical key</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="model-card">
+                    <div>
+                        <h3 class="model-name">OLA S1 X (4 kWh)</h3>
+                        <ul class="model-feature-list list-disc list-inside px-4">
+                            <li><strong>Battery:</strong> 4 kWh Lithium-ion</li>
+                            <li><strong>Motor:</strong> 5.5 kW Mid-drive IPM (Peak 7kW)</li>
+                            <li><strong>Range (True):</strong> Up to 190 km</li>
+                            <li><strong>Top Speed:</strong> 90 km/h</li>
+                            <li><strong>Display:</strong> 4.3" LCD</li>
+                            <li><strong>Brakes:</strong> Drum (F&R) with CBS</li>
+                            <li><strong>Storage:</strong> 34L underseat</li>
+                            <li><strong>Ignition:</strong> Physical key</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="model-card">
+                    <div>
+                        <h3 class="model-name">OLA S1 Pro Gen 3 (3 kWh)</h3>
+                        <ul class="model-feature-list list-disc list-inside px-4">
+                            <li><strong>Battery:</strong> 3 kWh Lithium-ion</li>
+                            <li><strong>Motor:</strong> 5.5 kW Mid-drive IPM (Peak 11kW)</li>
+                            <li><strong>Range (IDC):</strong> Up to 176 km</li>
+                            <li><strong>Top Speed:</strong> 117 km/h</li>
+                            <li><strong>Display:</strong> 7" TFT Touchscreen</li>
+                            <li><strong>OS:</strong> MoveOS5</li>
+                            <li><strong>Brakes:</strong> Disc (F&R) with CBS</li>
+                            <li><strong>Features:</strong> Voice Control, Cruise Control</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="model-card">
+                    <div>
+                        <h3 class="model-name">OLA S1 Pro Gen 3 (4 kWh)</h3>
+                        <ul class="model-feature-list list-disc list-inside px-4">
+                            <li><strong>Battery:</strong> 4 kWh Lithium-ion</li>
+                            <li><strong>Motor:</strong> 5.5 kW Mid-drive IPM (Peak 11kW)</li>
+                            <li><strong>Range (IDC):</strong> Up to 242 km</li>
+                            <li><strong>Top Speed:</strong> 117 km/h</li>
+                            <li><strong>Display:</strong> 7" TFT Touchscreen</li>
+                            <li><strong>OS:</strong> MoveOS5</li>
+                            <li><strong>Brakes:</strong> Disc (F&R) with CBS</li>
+                            <li><strong>Features:</strong> Voice Control, Cruise Control</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="model-card">
+                    <div>
+                        <h3 class="model-name">OLA S1 Pro+ Gen 3 (4 kWh)</h3>
+                        <ul class="model-feature-list list-disc list-inside px-4">
+                            <li><strong>Battery:</strong> 4 kWh Lithium-ion</li>
+                            <li><strong>Motor:</strong> 5.5 kW Mid-drive IPM (Peak 13kW)</li>
+                            <li><strong>Range (IDC):</strong> Up to 242 km</li>
+                            <li><strong>Top Speed:</strong> 141 km/h</li>
+                            <li><strong>Display:</strong> 7" TFT Touchscreen</li>
+                            <li><strong>OS:</strong> MoveOS5, Dual ABS</li>
+                            <li><strong>Features:</strong> Multi-mode Traction Control, Hypernode button</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="model-card">
+                    <div>
+                        <h3 class="model-name">OLA S1 Pro+ Gen 3 (5.3 kWh)</h3>
+                        <ul class="model-feature-list list-disc list-inside px-4">
+                            <li><strong>Battery:</strong> 5.3 kWh **4680 Bharat Cell**</li>
+                            <li><strong>Motor:</strong> 5.5 kW Mid-drive IPM (Peak 13kW)</li>
+                            <li><strong>Range (IDC):</strong> Up to 320 km</li>
+                            <li><strong>Top Speed:</strong> 141 km/h</li>
+                            <li><strong>Display:</strong> 7" TFT Touchscreen</li>
+                            <li><strong>OS:</strong> MoveOS5, Dual ABS</li>
+                            <li><strong>Features:</strong> Brake-by-wire, Hill Hold, Cruise Control</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <p class="text-sm text-slate-300 mt-8">
+                *IDC (Indian Driving Cycle) range figures are certified by ARAI. True range may vary based on riding conditions.
+            </p>
+        </div>
+    </section>
+
+    <!-- Models & Technical Specifications Section - Bikes -->
+    <section class="py-16 px-4 bg-slate-900">
+        <div class="container mx-auto text-center">
+            <h2 class="section-heading">Introducing OLA Electric Bikes</h2>
+            <p class="text-lg text-slate-300 mb-10 max-w-3xl mx-auto">
+                Discover OLA's revolutionary lineup of electric motorcycles, engineered for exhilarating performance, advanced technology, and the thrill of the ride.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="model-card">
+                    <div>
+                        <h3 class="model-name">OLA Roadster X (2.5kWh)</h3>
+                        <ul class="model-feature-list list-disc list-inside px-4">
+                            <li><strong>Top Speed:</strong> 105 km/h</li>
+                            <li><strong>0-40 km/h:</strong> 3.4s</li>
+                            <li><strong>Peak Power:</strong> 7 kW</li>
+                            <li><strong>Range (IDC):</strong> 140 km</li>
+                            <li><strong>Charging (0-80%):</strong> 6.2 hrs</li>
+                            <li><strong>Screen:</strong> 4.3" color LCD</li>
+                            <li><strong>Brakes:</strong> Drum (F&R)</li>
+                            <li><strong>Suspension:</strong> Telescopic (F) / Twin Shock (R)</li>
+                            <li><strong>Battery Warranty:</strong> 3 yrs/50000kms</li>
+                            <li><strong>Digital Tech:</strong> All included ✓</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="model-card">
+                    <div>
+                        <h3 class="model-name">OLA Roadster X (3.5kWh)</h3>
+                        <ul class="model-feature-list list-disc list-inside px-4">
+                            <li><strong>Top Speed:</strong> 118 km/h</li>
+                            <li><strong>0-40 km/h:</strong> 3.1s</li>
+                            <li><strong>Peak Power:</strong> 7 kW</li>
+                            <li><strong>Range (IDC):</strong> 196 km</li>
+                            <li><strong>Charging (0-80%):</strong> 4.6 hrs</li>
+                            <li><strong>Screen:</strong> 4.3" color LCD</li>
+                            <li><strong>Brakes:</strong> Drum (F&R)</li>
+                            <li><strong>Suspension:</strong> Telescopic (F) / Twin Shock (R)</li>
+                            <li><strong>Battery Warranty:</strong> 3 yrs/50000kms</li>
+                            <li><strong>Digital Tech:</strong> All included ✓</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="model-card">
+                    <div>
+                        <h3 class="model-name">OLA Roadster X (4.5kWh)</h3>
+                        <ul class="model-feature-list list-disc list-inside px-4">
+                            <li><strong>Top Speed:</strong> 118 km/h</li>
+                            <li><strong>0-40 km/h:</strong> 3.1s</li>
+                            <li><strong>Peak Power:</strong> 7 kW</li>
+                            <li><strong>Range (IDC):</strong> 252 km</li>
+                            <li><strong>Charging (0-80%):</strong> 5.9 hrs</li>
+                            <li><strong>Screen:</strong> 4.3" color LCD</li>
+                            <li><strong>Brakes:</strong> Drum (F&R)</li>
+                            <li><strong>Suspension:</strong> Telescopic (F) / Twin Shock (R)</li>
+                            <li><strong>Battery Warranty:</strong> 3 yrs/50000kms</li>
+                            <li><strong>Digital Tech:</strong> All included ✓</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="model-card">
+                    <div>
+                        <h3 class="model-name">OLA Roadster X+ (4.5kWh)</h3>
+                        <ul class="model-feature-list list-disc list-inside px-4">
+                            <li><strong>Top Speed:</strong> 125 km/h</li>
+                            <li><strong>0-40 km/h:</strong> 2.7s</li>
+                            <li><strong>Peak Power:</strong> 11 kW</li>
+                            <li><strong>Range (IDC):</strong> 252 km</li>
+                            <li><strong>Charging (0-80%):</strong> 5.9 hrs</li>
+                            <li><strong>Screen:</strong> 4.3" color LCD</li>
+                            <li><strong>Brakes:</strong> Disc (F) / Drum (R)</li>
+                            <li><strong>Suspension:</strong> Twin Shock (F&R)</li>
+                            <li><strong>Battery Warranty:</strong> 3 yrs/50000kms</li>
+                            <li><strong>Digital Tech:</strong> All included ✓</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="model-card">
+                    <div>
+                        <h3 class="model-name">OLA Roadster X+ (9.1kWh)</h3>
+                        <ul class="model-feature-list list-disc list-inside px-4">
+                            <li><strong>Top Speed:</strong> 125 km/h</li>
+                            <li><strong>0-40 km/h:</strong> 2.7s</li>
+                            <li><strong>Peak Power:</strong> 11 kW</li>
+                            <li><strong>Range (IDC):</strong> 501 km</li>
+                            <li><strong>Charging (0-80%):</strong> 8 hrs</li>
+                            <li><strong>Screen:</strong> 4.3" color LCD</li>
+                            <li><strong>Brakes:</strong> Disc (F) / Drum (R)</li>
+                            <li><strong>Suspension:</strong> Twin Shock (F&R)</li>
+                            <li><strong>Battery Warranty:</strong> 3 yrs/50000kms</li>
+                            <li><strong>Digital Tech:</strong> All included ✓</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <p class="text-sm text-slate-300 mt-8">
+                *IDC (Indian Driving Cycle) range figures are certified by ARAI. True range may vary based on riding conditions. Digital Tech features are confirmed as included for all listed Roadster X and Roadster X+ variants.
+            </p>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section id="book-now" class="gradient-bg text-white py-20 px-4 md:py-24 text-center">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-5xl font-extrabold leading-tight mb-6">
+                Ready to Ride the Future?
+            </h2>
+            <p class="text-lg md:text-xl font-light mb-10 max-w-2xl mx-auto">
+                Secure your OLA Electric Scooter today and be among the first to experience the revolution in urban mobility.
+            </p>
+            <a href="tel:+918505000778" class="button-primary">
+                Call to Book Your OLA Now!
+            </a>
+            <p class="text-sm mt-4 text-cyan-100">You can also visit www.olaelectric.com for more details.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-300 py-8 px-4 text-center">
+        <div class="container mx-auto">
+            <p>&copy; 2025 OLA Electric. All rights reserved.</p>
+            <div class="mt-4 text-sm">
+                <a href="#" class="hover:text-cyan-500 mx-2">Privacy Policy</a>
+                <span class="text-slate-600">|</span>
+                <a href="#" class="hover:text-cyan-500 mx-2">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // This script block is to explain the limitation for auto-updating prices.
+        // Direct fetching of live prices from 'https://book.olaelectric.com/'
+        // is generally prevented by Cross-Origin Resource Sharing (CORS) policies
+        // for security reasons when attempting from a client-side webpage hosted on a different domain.
+        // For truly dynamic, auto-updating prices, a server-side proxy would typically
+        // be required to fetch the data, which is beyond the scope of a single HTML file.
+        // The prices displayed in the "Models & Pricing" section are static placeholders.
+    </script>
+</body>
+</html>
